@@ -1,0 +1,189 @@
+/*
+  Stylesheet for meeting Minutes
+*/
+
+:root {
+    --primary-color: #0a3d62;
+    --accent-color: hsl(210, 70%, 55%);
+    --light-bg: #f5f7fa;
+    --text-color: #222;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg, white);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    color: color(display-p3 0.6 0.1 0.4);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+    border-bottom: 4px solid #3c6382;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0.5em 0;
+}
+
+main {
+    padding: 2rem 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    margin: 20px 15px 30px 15px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+}
+
+#attendance ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    list-style-type: square;
+}
+
+#agenda ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+p {
+    line-height: 1.6;
+    text-align: left;
+}
+
+h2:hover {
+    color: var(--accent-color);
+    transition: color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    padding-left: 4px;
+}
+
+audio,
+video {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+video {
+    min-width: 280px;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin: 1cm auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+button:active {
+    background-color: #2980b9;
+    transform: scale(0.97);
+    color: white;
+}
+
+section img {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section>p {
+    font-style: italic;
+}
+
+h2+p {
+    font-weight: bold;
+}
+
+section~section {
+    border-color: #ddd;
+}
+
+#agenda li {
+    color: #333;
+}
+
+[alt] {
+    border: 1px dashed orange;
+}
+
+section:has(h2) {
+    border-left: 6px solid #3b3b3b;
+}
+
+:is(header, footer) h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    color: rgb(34, 139, 34);
+}
+
+h1 {
+    color: color-mix(in srgb, orange 50%, white 50%);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    #attendance ul {
+        grid-template-columns: 1fr;
+    }
+}
