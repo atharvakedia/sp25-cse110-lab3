@@ -15,8 +15,6 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    /* color: color(display-p3 0.6 0.1 0.4); */
-    /* Commented out for validator compatibility */
 }
 
 header {
@@ -157,13 +155,11 @@ section:has(h2) {
 
 h3 {
     color: rgb(34, 139, 34);
-    /* RGB example */
 }
 
 
 h1 {
     color: orange;
-    /* Fallback color */
 }
 
 footer {
